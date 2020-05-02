@@ -21,6 +21,9 @@ module.exports = {
     // @ts-ignore
     '@typescript-eslint/ban-ts-ignore': 'off',
 
+    // the return type for some functions is rather obvious and need not be stated explicitly
+    '@typescript-eslint/explicit-function-return-type': 'off',
+
     // this rule does not understand jsdoc in typescript
     'valid-jsdoc': 'off',
 
