@@ -36,7 +36,7 @@ module.exports = {
     // 2 spaces for indent
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
 
-    // disable eslint/indent which doesn't work for typescript
+    // disable eslint/indent as it doesn't work for typescript
     'indent': 'off',
 
     // console.log() is often used in node.js
@@ -70,6 +70,11 @@ module.exports = {
     'require-jsdoc': 'off',
 
     // allow while (true)
-    'no-constant-condition': ['error', { checkLoops: false }]
+    'no-constant-condition': ['error', { checkLoops: false }],
+
+    // require operators to go after the line, except for ternary (?/:)
+    'operator-linebreak': ['error', 'after', {
+      overrides: { '?': 'before', ':': 'before' }
+    }]
   }
 };
