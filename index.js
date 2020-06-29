@@ -82,6 +82,11 @@ module.exports = {
     // require operators to go after the line, except for ternary (?/:)
     'operator-linebreak': ['error', 'after', {
       overrides: { '?': 'before', ':': 'before' }
-    }]
+    }],
+
+    // would you rather type
+    // if (!thing) throw new Error('the thing is null')
+    // every time
+    '@typescript-eslint/no-non-null-assertion': 'off'
   }
 };
