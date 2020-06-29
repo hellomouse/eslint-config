@@ -10,16 +10,23 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     // Override @typescript-eslint/recommended rules with updated Google rules for TS
-    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      { selector: 'default', format: ['camelCase'] },
+      { selector: 'variable', format: ['camelCase', 'UPPER_CASE'] },
+      { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
+      { selector: 'memberLike', format: ['camelCase'], leadingUnderscore: 'allow' },
+      { selector: 'typeLike', format: ['PascalCase'] }
+    ],
     '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
 
     // any exists for a reason
     '@typescript-eslint/no-explicit-any': 'off',
 
     // this rule only makes it more complicated to do @ts-ignore:
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
 
     // the return type for some functions is rather obvious and need not be stated explicitly
     '@typescript-eslint/explicit-function-return-type': 'off',
