@@ -10,16 +10,18 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     // Override @typescript-eslint/recommended rules with updated Google rules for TS
+    '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
+
+    // Naming conventions
     '@typescript-eslint/naming-convention': [
       'error',
-      { selector: 'default', format: ['camelCase'] },
-      { selector: 'variable', format: ['camelCase', 'UPPER_CASE'] },
+      { selector: 'default', format: ['camelCase'], leadingUnderscore: 'allow' },
+      { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
       { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
       { selector: 'memberLike', format: ['camelCase'], leadingUnderscore: 'allow' },
       { selector: 'typeLike', format: ['PascalCase'] },
       { selector: 'enumMember', format: ['PascalCase'] }
     ],
-    '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
 
     // any exists for a reason
     '@typescript-eslint/no-explicit-any': 'off',
@@ -88,6 +90,12 @@ module.exports = {
     // would you rather type
     // if (!thing) throw new Error('the thing is null')
     // every time
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    '@typescript-eslint/no-non-null-assertion': 'off',
+
+    // sometimes it is necessary to export functions with any
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+    // empty functions are needed sometimes
+    '@typescript-eslint/no-empty-function': 'off'
   }
 };
