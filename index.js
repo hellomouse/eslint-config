@@ -37,8 +37,11 @@ module.exports = {
     // this rule does not understand jsdoc in typescript
     'valid-jsdoc': 'off',
 
+    // disable eslint/comma-dangle as there is an extended version of it designed for TS
+    'comma-dangle': 'off',
+
     // highly subjective: dangling commas feel weird,
-    'comma-dangle': ['error', 'never'],
+    '@typescript-eslint/comma-dangle': ['error', 'never'],
 
     // so you can do n => +n instead of (n) => +n
     'arrow-parens': ['error', 'as-needed'],
@@ -52,12 +55,18 @@ module.exports = {
     // console.log() is often used in node.js
     'no-console': 'off',
 
+    // disable eslint/object-curly-spacing as there is an extended version of it designed for TS
+    'object-curly-spacing': 'off',
+
     // spaces after curly brackets look cleaner ({a: 4} vs { a: 4 })
     // also done by util.inspect
-    'object-curly-spacing': ['error', 'always'],
+    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+
+    // disable eslint/space-infix-ops as there is an extended version of it designed for TS
+    'space-infix-ops': 'off',
 
     // a + b rather than a+b, but allow integer hints to not have spaces (eg. b|0)
-    'space-infix-ops': ['error', { int32Hint: true }],
+    '@typescript-eslint/space-infix-ops': ['error', { int32Hint: true }],
 
     // lines should generally be kept short but definitely shouldn't be over 120 characters
     // allow long strings and regexes though
