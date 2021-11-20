@@ -9,9 +9,6 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   rules: {
-    // Override @typescript-eslint/recommended rules with updated Google rules for TS
-    '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
-
     // Naming conventions
     'camelcase': 'off',
     '@typescript-eslint/naming-convention': [
