@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
 
     // Naming conventions
+    'camelcase': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       { selector: 'default', format: ['camelCase'], leadingUnderscore: 'allow' },
@@ -105,6 +106,50 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // empty functions are needed sometimes
-    '@typescript-eslint/no-empty-function': 'off'
+    '@typescript-eslint/no-empty-function': 'off',
+
+    // Enforce use of the semicolon in `interfaces` and `type` literals
+    '@typescript-eslint/member-delimiter-style': 'error',
+
+    /*
+     * Overrides to Google rules with their @typescript-eslint equivalents
+     */
+
+    'semi': 'off',
+    '@typescript-eslint/semi': 'error',
+
+    'quotes': 'off',
+    '@typescript-eslint/quotes': [2, 'single', { allowTemplateLiterals: true }],
+
+    'no-invalid-this': 'off',
+    '@typescript-eslint/no-invalid-this': 'error',
+
+    'no-throw-literal': 'off',
+    '@typescript-eslint/no-throw-literal': 'error',
+
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
+
+    'brace-style': 'off',
+    '@typescript-eslint/brace-style': 'error',
+
+    'comma-spacing': 'off',
+    '@typescript-eslint/comma-spacing': 'error',
+
+    'func-call-spacing': 'off',
+    '@typescript-eslint/func-call-spacing': 'error',
+
+    'keyword-spacing': 'off',
+    '@typescript-eslint/keyword-spacing': 'error',
+
+    'no-array-constructor': 'off',
+    '@typescript-eslint/no-array-constructor': 'error',
+
+    'space-before-function-paren': 'off',
+    '@typescript-eslint/space-before-function-paren': ['error', {
+      asyncArrow: 'always',
+      anonymous: 'never',
+      named: 'never'
+    }]
   }
 };
