@@ -3,10 +3,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'eslint-config-google',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsdoc/recommended-typescript'
   ],
-  // eslint-plugin-jsdoc does not support typescript-style jsdoc
-  plugins: ['@typescript-eslint'],
+  plugins: ['jsdoc', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   rules: {
     // Naming conventions
@@ -107,6 +107,35 @@ module.exports = {
 
     // Enforce use of the semicolon in `interfaces` and `type` literals
     '@typescript-eslint/member-delimiter-style': 'error',
+            requireLast: true
+          },
+          singleline: {
+            delimiter: 'semi',
+            requireLast: true
+          }
+        }
+      }
+    }],
+    // descriptions on params and return is often redundant
+    // for example:
+    /*
+     * Adds given numbers
+     *
+     * @param {Number} a First number
+     * @param {Number} b Second number
+     * @return {Number} The result of the operation
+     */
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off',
+
+    // not everything needs to be a complete sentence
+    'jsdoc/require-description-complete-sentence': 'off',
+
+    // most things explain themselves
+    'jsdoc/require-example': 'off',
+
+    // don't worry about whether a newline exists after jsdoc description
+    'jsdoc/newline-after-description': 'off',
 
     /*
      * Overrides to Google rules with their @typescript-eslint equivalents
@@ -148,5 +177,15 @@ module.exports = {
       anonymous: 'never',
       named: 'never'
     }]
+  },
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        // keep the ones currently in use
+        returns: { replacement: 'return' },
+        yields: { replacement: 'yield' },
+        augments: { replacement: 'extends' }
+      }
+    }
   }
 };
