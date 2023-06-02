@@ -32,7 +32,7 @@ module.exports = {
     // the return type for some functions is rather obvious and need not be stated explicitly
     '@typescript-eslint/explicit-function-return-type': 'off',
 
-    // this rule does not understand jsdoc in typescript
+    // use jsdoc/require-jsdoc instead
     'valid-jsdoc': 'off',
 
     // disable eslint/comma-dangle as there is an extended version of it designed for TS
@@ -106,7 +106,19 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
 
     // Enforce use of the semicolon in `interfaces` and `type` literals
-    '@typescript-eslint/member-delimiter-style': 'error',
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      multiline: {
+        delimiter: 'comma',
+        requireLast: false
+      },
+      singleline: {
+        delimiter: 'comma',
+        requireLast: false
+      },
+      overrides: {
+        interface: {
+          multiline: {
+            delimiter: 'semi',
             requireLast: true
           },
           singleline: {
