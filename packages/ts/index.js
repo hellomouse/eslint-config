@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    './google.js',
+    '@hellomouse/google',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended-typescript',
     'plugin:@stylistic/disable-legacy'
@@ -32,9 +32,6 @@ module.exports = {
 
     // the return type for some functions is rather obvious and need not be stated explicitly
     '@typescript-eslint/explicit-function-return-type': 'off',
-
-    // use jsdoc/require-jsdoc instead
-    'valid-jsdoc': 'off',
 
     // highly subjective: dangling commas feel weird,
     '@stylistic/comma-dangle': ['error', 'never'],
@@ -71,9 +68,6 @@ module.exports = {
     // errors due to unintentional reassigning generally are quite rare, in addition,
     // changing from const to let is a bit annoying
     'prefer-const': 'off',
-
-    // use jsdoc/require-jsdoc instead
-    'require-jsdoc': 'off',
 
     // allow while (true)
     'no-constant-condition': ['error', { checkLoops: false }],
