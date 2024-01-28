@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hellomouse/eslint-config-typescript.git"
+    "url": "git+https://github.com/hellomouse/eslint-config.git",
+    "directory": "packages/ts"
   },
   "keywords": [
     "eslint",
@@ -21,9 +22,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hellomouse/eslint-config-typescript/issues"
+    "url": "https://github.com/hellomouse/eslint-config/issues"
   },
-  "homepage": "https://github.com/hellomouse/eslint-config-typescript#readme",
+  "homepage": "https://github.com/hellomouse/eslint-config#readme",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
