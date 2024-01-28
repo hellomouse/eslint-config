@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+// The intent of this file is to stay true as much as possible to the Google styleguide while upgrading to the latest standards and best practices for ESLint
+
 'use strict';
 module.exports = {
   rules: {
@@ -65,7 +67,7 @@ module.exports = {
       requireParamDescription: false,
       requireReturnDescription: false,
       requireReturn: false,
-      prefer: {returns: 'return'},
+      prefer: { returns: 'return' },
     }],
     // 'valid-typeof': 2 // eslint:recommended
 
@@ -163,7 +165,7 @@ module.exports = {
     // 'no-undef': 2, // eslint:recommended
     // 'no-undef-init': 0,
     // 'no-undefined': 0,
-    'no-unused-vars': [2, {args: 'none'}], // eslint:recommended
+    'no-unused-vars': [2, { args: 'none' }], // eslint:recommended
     // 'no-use-before-define': 0,
 
     // Node.js and CommonJS
@@ -189,7 +191,7 @@ module.exports = {
     '@stylistic/array-element-newline': 0, // eslint:recommended
     '@stylistic/block-spacing': [2, 'never'],
     '@stylistic/brace-style': 2,
-    'camelcase': [2, {properties: 'never'}],
+    'camelcase': [2, { properties: 'never' }],
     // 'capitalized-comments': 0,
     '@stylistic/comma-dangle': [2, 'always-multiline'],
     '@stylistic/comma-spacing': 2,
@@ -257,7 +259,7 @@ module.exports = {
     // 'no-mixed-operators': 0,
     '@stylistic/no-mixed-spaces-and-tabs': 2, // eslint:recommended
     // 'no-multi-assign': 0,
-    '@stylistic/no-multiple-empty-lines': [2, {max: 2}],
+    '@stylistic/no-multiple-empty-lines': [2, { max: 2 }],
     // 'no-negated-condition': 0,
     // 'no-nested-ternary': 0,
     'no-new-object': 2,
@@ -284,7 +286,7 @@ module.exports = {
     '@stylistic/padded-blocks': [2, 'never'],
     // 'padding-line-between-statements': 0,
     '@stylistic/quote-props': [2, 'consistent'],
-    '@stylistic/quotes': [2, 'single', {allowTemplateLiterals: true}],
+    '@stylistic/quotes': [2, 'single', { allowTemplateLiterals: true}],
     'require-jsdoc': [2, {
       require: {
         FunctionDeclaration: true,
@@ -337,7 +339,7 @@ module.exports = {
     'no-var': 2,
     // 'object-shorthand': 0,
     // 'prefer-arrow-callback': 0,
-    'prefer-const': [2, {destructuring: 'all'}],
+    'prefer-const': [2, { destructuring: 'all' }],
     // 'prefer-destructuring': 0,
     // 'prefer-numeric-literals': 0,
     'prefer-rest-params': 2,
