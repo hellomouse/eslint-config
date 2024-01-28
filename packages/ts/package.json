@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config-typescript",
-  "version": "2.0.0-stylistic.0",
+  "version": "2.0.0-stylistic.1",
   "description": "ESLint config for Hellomouse, based off of Google's config",
   "main": "index.js",
   "scripts": {
