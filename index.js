@@ -2,11 +2,12 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'eslint-config-google',
+    './google.js',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsdoc/recommended-typescript'
+    'plugin:jsdoc/recommended-typescript',
+    'plugin:@stylistic/disable-legacy'
   ],
-  plugins: ['jsdoc', '@typescript-eslint'],
+  plugins: ['jsdoc', '@typescript-eslint', '@stylistic'],
   parser: '@typescript-eslint/parser',
   rules: {
     // Naming conventions
@@ -35,40 +36,28 @@ module.exports = {
     // use jsdoc/require-jsdoc instead
     'valid-jsdoc': 'off',
 
-    // disable eslint/comma-dangle as there is an extended version of it designed for TS
-    'comma-dangle': 'off',
-
     // highly subjective: dangling commas feel weird,
-    '@typescript-eslint/comma-dangle': ['error', 'never'],
+    '@stylistic/comma-dangle': ['error', 'never'],
 
     // so you can do n => +n instead of (n) => +n
-    'arrow-parens': ['error', 'as-needed'],
+    '@stylistic/arrow-parens': ['error', 'as-needed'],
 
     // 2 spaces for indent
-    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
-
-    // disable eslint/indent as it doesn't work for typescript
-    'indent': 'off',
+    '@stylistic/indent': ['error', 2, { SwitchCase: 1 }],
 
     // console.log() is often used in node.js
     'no-console': 'off',
 
-    // disable eslint/object-curly-spacing as there is an extended version of it designed for TS
-    'object-curly-spacing': 'off',
-
     // spaces after curly brackets look cleaner ({a: 4} vs { a: 4 })
     // also done by util.inspect
-    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-
-    // disable eslint/space-infix-ops as there is an extended version of it designed for TS
-    'space-infix-ops': 'off',
+    '@stylistic/object-curly-spacing': ['error', 'always'],
 
     // a + b rather than a+b, but allow integer hints to not have spaces (eg. b|0)
-    '@typescript-eslint/space-infix-ops': ['error', { int32Hint: true }],
+    '@stylistic/space-infix-ops': ['error', { int32Hint: true }],
 
     // lines should generally be kept short but definitely shouldn't be over 120 characters
     // allow long strings and regexes though
-    'max-len': ['error', {
+    '@stylistic/max-len': ['error', {
       code: 120,
       ignoreUrls: true,
       ignoreStrings: true,
@@ -90,7 +79,7 @@ module.exports = {
     'no-constant-condition': ['error', { checkLoops: false }],
 
     // require operators to go after the line, except for ternary (?/:)
-    'operator-linebreak': ['error', 'after', {
+    '@stylistic/operator-linebreak': ['error', 'after', {
       overrides: { '?': 'before', ':': 'before' }
     }],
 
@@ -106,7 +95,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
 
     // Enforce use of the semicolon in `interfaces` and `type` literals
-    '@typescript-eslint/member-delimiter-style': ['error', {
+    '@stylistic/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'comma',
         requireLast: false
@@ -152,13 +141,6 @@ module.exports = {
     /*
      * Overrides to Google rules with their @typescript-eslint equivalents
      */
-
-    'semi': 'off',
-    '@typescript-eslint/semi': 'error',
-
-    'quotes': 'off',
-    '@typescript-eslint/quotes': [2, 'single', { allowTemplateLiterals: true }],
-
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
 
@@ -168,27 +150,8 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
 
-    'brace-style': 'off',
-    '@typescript-eslint/brace-style': 'error',
-
-    'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': 'error',
-
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': 'error',
-
-    'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': 'error',
-
     'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': 'error',
-
-    'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': ['error', {
-      asyncArrow: 'always',
-      anonymous: 'never',
-      named: 'never'
-    }]
+    '@typescript-eslint/no-array-constructor': 'error'
   },
   settings: {
     jsdoc: {
