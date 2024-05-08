@@ -6,7 +6,7 @@ import js from "@eslint/js";
 export default [
   js.configs.recommended,
   ...google,
-  jsdoc.configs.recommended,
+  jsdoc.configs["flat/recommended"],
   {
     // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
     plugins: {
