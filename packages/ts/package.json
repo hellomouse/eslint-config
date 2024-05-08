@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config-typescript",
-  "version": "2.0.1-flat.0",
+  "version": "2.0.1-flat.1",
   "description": "ESLint config for Hellomouse, based off of Google's config",
   "main": "index.js",
   "type": "module",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@eslint/js": "^8.57",
-    "@hellomouse/eslint-config-google": "../google",
+    "@hellomouse/eslint-config-google": "0.15-flat.0",
     "@stylistic/eslint-plugin": "^1.8.1",
     "eslint-plugin-jsdoc": "^48.0.4",
     "typescript-eslint": "^7.8.0"

@@ -2,6 +2,7 @@
   "name": "@hellomouse/eslint-config-google",
   "type": "module",
   "version": "0.15.0-flat.0",
+  "main": "index.js",
   "description": "ESLint shareable config for the Google style",
   "license": "Apache-2.0",
   "repository": {
