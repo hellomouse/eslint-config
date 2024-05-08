@@ -1,80 +1,87 @@
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    '@hellomouse/google',
-    'plugin:jsdoc/recommended'
-  ],
-  // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
-  plugins: ['@stylistic', 'jsdoc'],
-  rules: {
-    // highly subjective: dangling commas feel weird,
-    'comma-dangle': ['error', 'never'],
+import google from '@hellomouse/eslint-config-google';
+import jsdoc from 'eslint-plugin-jsdoc';
+import js from "@eslint/js";
 
-    // so you can do n => +n instead of (n) => +n
-    'arrow-parens': ['error', 'as-needed'],
+/** @type {import("eslint").Linter.FlatConfig[]} */
+export default [
+  js.configs.recommended,
+  ...google,
+  jsdoc.configs.recommended,
+  {
+    // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
+    plugins: {
+      jsdoc: jsdoc
+    },
+    rules: {
+      // highly subjective: dangling commas feel weird,
+      'comma-dangle': ['error', 'never'],
 
-    // 2 spaces for indent
-    'indent': ['error', 2, { SwitchCase: 1 }],
+      // so you can do n => +n instead of (n) => +n
+      'arrow-parens': ['error', 'as-needed'],
 
-    // console.log() is often used in node.js
-    'no-console': 'off',
+      // 2 spaces for indent
+      'indent': ['error', 2, { SwitchCase: 1 }],
 
-    // spaces after curly brackets look cleaner ({a: 4} vs { a: 4 })
-    // also done by util.inspect
-    'object-curly-spacing': ['error', 'always'],
+      // console.log() is often used in node.js
+      'no-console': 'off',
 
-    // a + b rather than a+b, but allow integer hints to not have spaces (eg. b|0)
-    'space-infix-ops': ['error', { int32Hint: true }],
+      // spaces after curly brackets look cleaner ({a: 4} vs { a: 4 })
+      // also done by util.inspect
+      'object-curly-spacing': ['error', 'always'],
 
-    // lines should generally be kept short but definitely shouldn't be over 120 characters
-    // allow long strings and regexes though
-    'max-len': ['error', {
-      code: 120,
-      ignoreUrls: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreRegExpLiterals: true
-    }],
+      // a + b rather than a+b, but allow integer hints to not have spaces (eg. b|0)
+      'space-infix-ops': ['error', { int32Hint: true }],
 
-    // == has weird behavior with types, always use === instead
-    'eqeqeq': ['error', 'always'],
+      // lines should generally be kept short but definitely shouldn't be over 120 characters
+      // allow long strings and regexes though
+      'max-len': ['error', {
+        code: 120,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true
+      }],
 
-    // errors due to unintentional reassigning generally are quite rare, in addition,
-    // changing from const to let is a bit annoying
-    'prefer-const': 'off',
+      // == has weird behavior with types, always use === instead
+      'eqeqeq': ['error', 'always'],
 
-    // allow while (true)
-    'no-constant-condition': ['error', { checkLoops: false }],
+      // errors due to unintentional reassigning generally are quite rare, in addition,
+      // changing from const to let is a bit annoying
+      'prefer-const': 'off',
 
-    // descriptions on params and return is often redundant
-    // for example:
-    /*
-     * Adds given numbers
-     *
-     * @param {Number} a First number
-     * @param {Number} b Second number
-     * @return {Number} The result of the operation
-     */
-    'jsdoc/require-param-description': 'off',
-    'jsdoc/require-returns-description': 'off',
+      // allow while (true)
+      'no-constant-condition': ['error', { checkLoops: false }],
 
-    // not everything needs to be a complete sentence
-    'jsdoc/require-description-complete-sentence': 'off',
+      // descriptions on params and return is often redundant
+      // for example:
+      /*
+      * Adds given numbers
+      *
+      * @param {Number} a First number
+      * @param {Number} b Second number
+      * @return {Number} The result of the operation
+      */
+      'jsdoc/require-param-description': 'off',
+      'jsdoc/require-returns-description': 'off',
 
-    // most things explain themselves
-    'jsdoc/require-example': 'off',
+      // not everything needs to be a complete sentence
+      'jsdoc/require-description-complete-sentence': 'off',
 
-    // don't worry about whether a newline exists after jsdoc description
-    'jsdoc/newline-after-description': 'off'
-  },
-  settings: {
-    jsdoc: {
-      tagNamePreference: {
-        // keep the ones currently in use
-        returns: { replacement: 'return' },
-        yields: { replacement: 'yield' },
-        augments: { replacement: 'extends' }
+      // most things explain themselves
+      'jsdoc/require-example': 'off',
+
+      // don't worry about whether a newline exists after jsdoc description
+      'jsdoc/newline-after-description': 'off'
+    },
+    settings: {
+      jsdoc: {
+        tagNamePreference: {
+          // keep the ones currently in use
+          returns: { replacement: 'return' },
+          yields: { replacement: 'yield' },
+          augments: { replacement: 'extends' }
+        }
       }
     }
   }
-};
+];

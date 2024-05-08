@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-'use strict';
 
-const assert = require('assert');
-const eslint = require('eslint');
-const conf = require('../');
+import assert, { equal } from 'assert'
+import * as eslint from 'eslint'
+import conf from '../index.js'
 
 // The source files to lint.
 const repoFiles = [
@@ -31,13 +30,13 @@ const eslintOpts = {
   useEslintrc: false,
   envs: ['node', 'es6'],
   parserOptions: {ecmaVersion: 2018},
-  rules: conf.rules,
+  rules: conf[0].rules,
 };
 
 // Runs the linter on the repo files and asserts no errors were found.
 const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
-assert.equal(report.errorCount, 0);
-assert.equal(report.warningCount, 0);
+equal(report.errorCount, 0);
+equal(report.warningCount, 0);
 repoFiles.forEach((file, index) => {
   assert(report.results[index].filePath.endsWith(file));
 });
