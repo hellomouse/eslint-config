@@ -1,40 +1,44 @@
-import google from '@hellomouse/eslint-config-google';
-import jsdoc from 'eslint-plugin-jsdoc';
-import js from "@eslint/js";
+const google = require('@hellomouse/eslint-config-google');
+const jsdoc = require('eslint-plugin-jsdoc');
+const js = require('@eslint/js');
+const stylistic = require('@stylistic/eslint-plugin');
 
+const jsdocNoPlugin = jsdoc.configs['flat/recommended'];
+delete jsdocNoPlugin.plugins;
 /** @type {import("eslint").Linter.FlatConfig[]} */
-export default [
+module.exports = [
   js.configs.recommended,
   ...google,
-  jsdoc.configs["flat/recommended"],
+  jsdocNoPlugin,
+  stylistic.configs['disable-legacy'],
   {
     // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
     plugins: {
-      jsdoc: jsdoc
+      // jsdoc: jsdoc
     },
     rules: {
       // highly subjective: dangling commas feel weird,
-      'comma-dangle': ['error', 'never'],
+      '@stylistic/comma-dangle': ['error', 'never'],
 
       // so you can do n => +n instead of (n) => +n
-      'arrow-parens': ['error', 'as-needed'],
+      '@stylistic/arrow-parens': ['error', 'as-needed'],
 
       // 2 spaces for indent
-      'indent': ['error', 2, { SwitchCase: 1 }],
+      '@stylistic/indent': ['error', 2, { SwitchCase: 1 }],
 
       // console.log() is often used in node.js
       'no-console': 'off',
 
       // spaces after curly brackets look cleaner ({a: 4} vs { a: 4 })
       // also done by util.inspect
-      'object-curly-spacing': ['error', 'always'],
+      '@stylistic/object-curly-spacing': ['error', 'always'],
 
       // a + b rather than a+b, but allow integer hints to not have spaces (eg. b|0)
-      'space-infix-ops': ['error', { int32Hint: true }],
+      '@stylistic/space-infix-ops': ['error', { int32Hint: true }],
 
       // lines should generally be kept short but definitely shouldn't be over 120 characters
       // allow long strings and regexes though
-      'max-len': ['error', {
+      '@stylistic/max-len': ['error', {
         code: 120,
         ignoreUrls: true,
         ignoreStrings: true,

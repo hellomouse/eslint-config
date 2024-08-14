@@ -1,20 +1,20 @@
-import js from "@eslint/js";
-import google from "@hellomouse/eslint-config-google";
-import jsdoc from "eslint-plugin-jsdoc";
-import tseslint from 'typescript-eslint';
-import stylistic from '@stylistic/eslint-plugin';
+const js = require('@eslint/js');
+const google = require('@hellomouse/eslint-config-google');
+const jsdoc = require('eslint-plugin-jsdoc');
+const tseslint = require('typescript-eslint');
+const stylistic = require('@stylistic/eslint-plugin');
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
-export default [
+module.exports = [
   js.configs.recommended,
-  ...tseslint.configs.eslintRecommended,
+  tseslint.configs.eslintRecommended,
   ...google,
   ...tseslint.configs.recommended,
-  jsdoc.configs["flat/recommended-typescript"],
-  stylistic.configs["disable-legacy"],
+  jsdoc.configs['flat/recommended-typescript'],
+  stylistic.configs['disable-legacy'],
   {
     languageOptions: {
-      parser: tseslint.parser,
+      parser: tseslint.parser
     },
     plugins: {
       'jsdoc': jsdoc,
@@ -169,4 +169,4 @@ export default [
         }
       }
     }
-}];
+  }];

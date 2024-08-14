@@ -1,15 +1,13 @@
 {
   "name": "@hellomouse/eslint-config-typescript",
-  "version": "2.0.1-flat.1",
+  "version": "2.0.1-flat.2",
   "description": "ESLint config for Hellomouse, based off of Google's config",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/hellomouse/eslint-config.git",
+    "type": "git",
+    "url": "git+https://github.com/hellomouse/eslint-config.git",
     "directory": "packages/ts"
   },
   "keywords": [
@@ -31,9 +29,15 @@
   },
   "dependencies": {
     "@eslint/js": "^8.57",
-    "@hellomouse/eslint-config-google": "0.15-flat.0",
+    "@hellomouse/eslint-config-google": "0.15.0-flat.1",
     "@stylistic/eslint-plugin": "^1.8.1",
     "eslint-plugin-jsdoc": "^48.0.4",
     "typescript-eslint": "^7.8.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
   }
 }

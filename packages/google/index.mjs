@@ -15,17 +15,17 @@
  */
 
 // The intent of this file is to stay true as much as possible to the Google styleguide while upgrading to the latest standards and best practices for ESLint
-import jsdoc from "eslint-plugin-jsdoc";
-import stylistic from "@stylistic/eslint-plugin";
-import importPlugin from "eslint-plugin-import";
+import jsdoc from 'eslint-plugin-jsdoc';
+import stylistic from '@stylistic/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   {
     plugins: {
-      jsdoc: jsdoc,
-      "@stylistic": stylistic,
-      import: importPlugin
+      'jsdoc': jsdoc,
+      '@stylistic': stylistic,
+      'import': importPlugin
     },
     rules: {
       // The rules below are listed in the order they appear on the eslint
@@ -41,7 +41,7 @@ export default [
       // http://eslint.org/docs/rules/#possible-problems
       // ---------------------------------------------
       // 'array-callback-return': 0,
-      "constructor-super": 2, // eslint:recommended
+      'constructor-super': 2, // eslint:recommended
 
       // 'for-direction': 2, // eslint:recommended
       // 'getter-return': 2, // eslint:recommended
@@ -49,7 +49,7 @@ export default [
       // 'no-await-in-loop': 0,
       // 'no-class-assign': 2, // eslint:recommended
       // 'no-compare-neg-zero': 2, // eslint:recommended
-      "no-cond-assign": 0, // eslint:recommended
+      'no-cond-assign': 0, // eslint:recommended
 
       // 'no-const-assign': 2, // eslint:recommended
       // 'no-constant-binary-expression': 0,
@@ -71,12 +71,12 @@ export default [
       // 'no-import-assign': 2, // eslint:recommended
       // 'no-inner-declarations': 2, // eslint:recommended
       // 'no-invalid-regexp': 2, // eslint:recommended
-      "no-irregular-whitespace": 2, // eslint:recommended
+      'no-irregular-whitespace': 2, // eslint:recommended
 
       // 'no-loss-of-precision': 2, // eslint:recommended
       // 'no-misleading-character-class': 2, // eslint:recommended
       // 'no-new-native-nonconstructor': 0,
-      "no-new-symbol": 2, // eslint:recommended
+      'no-new-symbol': 2, // eslint:recommended
 
       // 'no-obj-calls': 2, // eslint:recommended
       // 'no-promise-executor-return': 0,
@@ -86,10 +86,10 @@ export default [
       // 'no-setter-return': 2, // eslint:recommended
       // 'no-sparse-arrays': 2, // eslint:recommended
       // 'no-template-curly-in-string': 0,
-      "no-this-before-super": 2, // eslint:recommended
+      'no-this-before-super': 2, // eslint:recommended
 
       // 'no-undef': 2, // eslint:recommended
-      "no-unexpected-multiline": 2, // eslint:recommended
+      'no-unexpected-multiline': 2, // eslint:recommended
 
       // 'no-unmodified-loop-condition': 0,
       // 'no-unreachable': 2, // eslint:recommended
@@ -98,7 +98,7 @@ export default [
       // 'no-unsafe-negation': 2, // eslint:recommended
       // 'no-unsafe-optional-chaining': 2, // eslint:recommended
       // 'no-unused-private-class-members': 0,
-      "no-unused-vars": [2, { args: "none" }], // eslint:recommended
+      'no-unused-vars': [2, { args: 'none' }], // eslint:recommended
 
       // 'no-use-before-define': 0,
       // 'no-useless-backreference': 2, // eslint:recommended
@@ -111,23 +111,23 @@ export default [
       // 'accessor-pairs': 0,
       // 'arrow-body-style': 0,
       // 'block-scoped-var': 0,
-      camelcase: [2, { properties: "never" }],
+      'camelcase': [2, { properties: 'never' }],
       // 'capitalized-comments': 0,
       // 'class-methods-use-this': 0,
       // 'complexity': 0,
       // 'consistent-return': 0,
       // 'consistent-this': 0,
-      curly: [2, "multi-line"],
+      'curly': [2, 'multi-line'],
       // 'default-case': 0,
       // 'default-case-last': 0,
       // 'default-param-last': 0,
       // 'dot-notation': 0,
-      eqeqeq: 2,
+      'eqeqeq': 2,
       // 'func-name-matching': 0,
       // 'func-names': 0,
       // 'func-style': 0,
       // 'grouped-accessor-pairs': 0,
-      "guard-for-in": 2,
+      'guard-for-in': 2,
       // 'id-denylist': 0,
       // 'id-length': 0,
       // 'id-match': 0,
@@ -141,11 +141,11 @@ export default [
       // 'max-params': 0,
       // 'max-statements': 0,
       // 'multiline-comment-style': 0,
-      "new-cap": 2,
+      'new-cap': 2,
       // 'no-alert': 0,
-      "no-array-constructor": 2,
+      'no-array-constructor': 2,
       // 'no-bitwise': 0,
-      "no-caller": 2,
+      'no-caller': 2,
       // 'no-case-declarations': 2, // eslint:recommended
       // 'no-console': 0,
       // 'no-continue': 0,
@@ -157,8 +157,8 @@ export default [
       // 'no-empty-static-block': 0,
       // 'no-eq-null': 0,
       // 'no-eval': 0,
-      "no-extend-native": 2,
-      "no-extra-bind": 2,
+      'no-extend-native': 2,
+      'no-extra-bind': 2,
       // 'no-extra-boolean-cast': 2, // eslint:recommended
       // 'no-extra-label': 0,
       // 'no-global-assign': 2, // eslint:recommended
@@ -166,7 +166,7 @@ export default [
       // 'no-implicit-globals': 0,
       // 'no-implied-eval': 0,
       // 'no-inline-comments': 0,
-      "no-invalid-this": 2,
+      'no-invalid-this': 2,
       // 'no-iterator': 0,
       // 'no-label-var': 0,
       // 'no-labels': 0,
@@ -175,12 +175,12 @@ export default [
       // 'no-loop-func': 0,
       // 'no-magic-numbers': 0,
       // 'no-multi-assign': 0,
-      "no-multi-str": 2,
+      'no-multi-str': 2,
       // 'no-negated-condition': 0,
       // 'no-nested-ternary': 0,
       // 'no-new': 0,
       // 'no-new-func': 0,
-      "no-new-wrappers": 2,
+      'no-new-wrappers': 2,
       // 'no-nonoctal-decimal-escape': 2, // eslint:recommended
       // 'no-object-constructor': 0,
       // 'no-octal': 2, // eslint:recommended
@@ -201,7 +201,7 @@ export default [
       // 'no-shadow': 0,
       // 'no-shadow-restricted-names': 2, // eslint:recommended
       // 'no-ternary': 0,
-      "no-throw-literal": 2,
+      'no-throw-literal': 2,
       // 'no-undef-init': 0,
       // 'no-undefined': 0,
       // 'no-underscore-dangle': 0,
@@ -216,33 +216,33 @@ export default [
       // 'no-useless-escape': 2, // eslint:recommended
       // 'no-useless-rename': 0,
       // 'no-useless-return': 0,
-      "no-var": 2,
+      'no-var': 2,
       // 'no-void': 0,
       // 'no-warning-comments': 0,
-      "no-with": 2, // eslint:recommended
+      'no-with': 2, // eslint:recommended
 
       // 'object-shorthand': 0,
-      "one-var": [
+      'one-var': [
         2,
         {
-          var: "never",
-          let: "never",
-          const: "never",
-        },
+          var: 'never',
+          let: 'never',
+          const: 'never'
+        }
       ],
       // 'operator-assignment': 0,
       // 'prefer-arrow-callback': 0,
-      "prefer-const": [2, { destructuring: "all" }],
+      'prefer-const': [2, { destructuring: 'all' }],
       // 'prefer-destructuring': 0,
       // 'prefer-exponentiation-operator': 0,
       // 'prefer-named-capture-group': 0,
       // 'prefer-numeric-literals': 0,
       // 'prefer-object-has-own': 0,
       // 'prefer-object-spread': 0,
-      "prefer-promise-reject-errors": 2,
+      'prefer-promise-reject-errors': 2,
       // 'prefer-regex-literals': 0,
-      "prefer-rest-params": 2,
-      "prefer-spread": 2,
+      'prefer-rest-params': 2,
+      'prefer-spread': 2,
       // 'prefer-template': 0,
       // 'radix': 0,
       // 'require-await': 0,
@@ -263,60 +263,60 @@ export default [
       // Stylistic Issues
       // https://eslint.style/packages/js#rules
       // ---------------------------------------------
-      "@stylistic/array-bracket-newline": 0,
-      "@stylistic/array-bracket-spacing": [2, "never"],
-      "@stylistic/array-element-newline": 0,
-      "@stylistic/arrow-parens": [2, "always"],
+      '@stylistic/array-bracket-newline': 0,
+      '@stylistic/array-bracket-spacing': [2, 'never'],
+      '@stylistic/array-element-newline': 0,
+      '@stylistic/arrow-parens': [2, 'always'],
       // '@stylistic/arrow-spacing': 0,
-      "@stylistic/block-spacing": [2, "never"],
-      "@stylistic/brace-style": 2,
-      "@stylistic/comma-dangle": [2, "always-multiline"],
-      "@stylistic/comma-spacing": 2,
-      "@stylistic/comma-style": 2,
-      "@stylistic/computed-property-spacing": 2,
+      '@stylistic/block-spacing': [2, 'never'],
+      '@stylistic/brace-style': 2,
+      '@stylistic/comma-dangle': [2, 'always-multiline'],
+      '@stylistic/comma-spacing': 2,
+      '@stylistic/comma-style': 2,
+      '@stylistic/computed-property-spacing': 2,
       // '@stylistic/dot-location': 0,
-      "@stylistic/eol-last": 2,
-      "@stylistic/func-call-spacing": 2,
+      '@stylistic/eol-last': 2,
+      '@stylistic/func-call-spacing': 2,
       // '@stylistic/function-call-argument-newline': 0,
       // '@stylistic/function-call-spacing': 0,
       // '@stylistic/function-paren-newline': 0,
-      "@stylistic/generator-star-spacing": [2, "after"],
+      '@stylistic/generator-star-spacing': [2, 'after'],
       // '@stylistic/implicit-arrow-linebreak': 0,
-      "@stylistic/indent": [
+      '@stylistic/indent': [
         2,
         2,
         {
           CallExpression: {
-            arguments: 2,
+            arguments: 2
           },
           FunctionDeclaration: {
             body: 1,
-            parameters: 2,
+            parameters: 2
           },
           FunctionExpression: {
             body: 1,
-            parameters: 2,
+            parameters: 2
           },
           MemberExpression: 2,
           ObjectExpression: 1,
           SwitchCase: 1,
-          ignoredNodes: ["ConditionalExpression"],
-        },
+          ignoredNodes: ['ConditionalExpression']
+        }
       ],
       // '@stylistic/jsx-quotes': 0,
-      "@stylistic/key-spacing": 2,
-      "@stylistic/keyword-spacing": 2,
-      "@stylistic/linebreak-style": 2,
+      '@stylistic/key-spacing': 2,
+      '@stylistic/keyword-spacing': 2,
+      '@stylistic/linebreak-style': 2,
       // '@stylistic/lines-around-comment': 0,
       // '@stylistic/lines-between-class-members': 0,
-      "@stylistic/max-len": [
+      '@stylistic/max-len': [
         2,
         {
           code: 80,
           tabWidth: 2,
           ignoreUrls: true,
-          ignorePattern: "goog.(module|require)",
-        },
+          ignorePattern: 'goog.(module|require)'
+        }
       ],
       // '@stylistic/max-statements-per-line': 0,
       // '@stylistic/multiline-ternary': 0,
@@ -327,62 +327,62 @@ export default [
       // '@stylistic/no-extra-semi': 0,
       // '@stylistic/no-floating-decimal': 0,
       // '@stylistic/no-mixed-operators': 0,
-      "@stylistic/no-mixed-spaces-and-tabs": 2,
+      '@stylistic/no-mixed-spaces-and-tabs': 2,
       // '@stylistic/no-multi-spaces': 0,
-      "@stylistic/no-multiple-empty-lines": 2,
-      "@stylistic/no-tabs": 2,
-      "@stylistic/no-trailing-spaces": 0,
+      '@stylistic/no-multiple-empty-lines': 2,
+      '@stylistic/no-tabs': 2,
+      '@stylistic/no-trailing-spaces': 0,
       // '@stylistic/no-whitespace-before-property': 0,
       // '@stylistic/nonblock-statement-body-position': 0,
       // '@stylistic/object-curly-newline': 0,
-      "@stylistic/object-curly-spacing": 2,
+      '@stylistic/object-curly-spacing': 2,
       // '@stylistic/object-property-newline': 0,
       // '@stylistic/one-var-declaration-per-line': 0,
-      "@stylistic/operator-linebreak": [2, "after"],
-      "@stylistic/padded-blocks": [2, "never"],
+      '@stylistic/operator-linebreak': [2, 'after'],
+      '@stylistic/padded-blocks': [2, 'never'],
       // '@stylistic/padding-line-between-statements': 0,
-      "@stylistic/quote-props": [2, "consistent"],
-      "@stylistic/quotes": [2, "single", { allowTemplateLiterals: true }],
-      "@stylistic/rest-spread-spacing": 2,
-      "@stylistic/semi": 2,
-      "@stylistic/semi-spacing": 2,
+      '@stylistic/quote-props': [2, 'consistent'],
+      '@stylistic/quotes': [2, 'single', { allowTemplateLiterals: true }],
+      '@stylistic/rest-spread-spacing': 2,
+      '@stylistic/semi': 2,
+      '@stylistic/semi-spacing': 2,
       // '@stylistic/semi-style': 0,
-      "@stylistic/space-before-blocks": 2,
-      "@stylistic/space-before-function-paren": [
+      '@stylistic/space-before-blocks': 2,
+      '@stylistic/space-before-function-paren': [
         2,
         {
-          asyncArrow: "always",
-          anonymous: "never",
-          named: "never",
-        },
+          asyncArrow: 'always',
+          anonymous: 'never',
+          named: 'never'
+        }
       ],
       // '@stylistic/space-in-parens': 0,
       // '@stylistic/space-infix-ops': 0,
       // '@stylistic/space-unary-ops': 0,
-      "@stylistic/spaced-comment": [2, "always"],
-      "@stylistic/switch-colon-spacing": 2,
+      '@stylistic/spaced-comment': [2, 'always'],
+      '@stylistic/switch-colon-spacing': 2,
       // '@stylistic/template-curly-spacing': 0,
       // '@stylistic/template-tag-spacing': 0,
       // '@stylistic/wrap-iife': 0,
       // '@stylistic/wrap-regex': 0,
-      "@stylistic/yield-star-spacing": [2, "after"],
+      '@stylistic/yield-star-spacing': [2, 'after'],
 
       // JSDoc (equivalency to the deprecated `valid-jsdoc` rule)
       // https://github.com/gajus/eslint-plugin-jsdoc#rules
       // ---------------------------------------------
-      "jsdoc/require-jsdoc": 2,
-      "jsdoc/require-param-description": 0,
-      "jsdoc/require-returns-description": 0,
-      "jsdoc/require-returns": 0,
+      'jsdoc/require-jsdoc': 2,
+      'jsdoc/require-param-description': 0,
+      'jsdoc/require-returns-description': 0,
+      'jsdoc/require-returns': 0,
 
-      "import/extensions": ["error", { js: "always" }],
+      'import/extensions': ['error', { js: 'always' }]
     },
     settings: {
       jsdoc: {
         tagNamePreference: {
-          returns: { replacement: "return" },
-        },
-      },
+          returns: { replacement: 'return' }
+        }
+      }
     }
-  },
+  }
 ];

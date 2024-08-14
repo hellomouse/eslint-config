@@ -1,8 +1,6 @@
 {
   "name": "@hellomouse/eslint-config-google",
-  "type": "module",
-  "version": "0.15.0-flat.0",
-  "main": "index.js",
+  "version": "0.15.0-flat.1",
   "description": "ESLint shareable config for the Google style",
   "license": "Apache-2.0",
   "repository": {
@@ -15,7 +13,8 @@
     "test": "node test/test.js"
   },
   "files": [
-    "index.js"
+    "index.cjs",
+    "index.mjs"
   ],
   "keywords": [
     "google",
@@ -41,11 +40,17 @@
     "eslint": "^8.57.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "^1.5.4",
+    "@stylistic/eslint-plugin": "^1.8.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^48.0.4"
   },
   "peerDependencies": {
     "eslint": ">=8.57.0 < 9.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
   }
 }
