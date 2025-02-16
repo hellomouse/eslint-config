@@ -37,9 +37,7 @@
     "eslint": ">=8.57"
   },
   "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.cjs"
-    }
+    "import": "./index.mjs",
+    "require": "./index.cjs"
   }
 }
