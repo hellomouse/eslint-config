@@ -8,7 +8,7 @@ import stylistic from '@stylistic/eslint-plugin';
 export default [
   js.configs.recommended,
   tseslint.configs.eslintRecommended,
-  ...google,
+  google,
   ...tseslint.configs.recommended,
   jsdoc.configs['flat/recommended-typescript'],
   stylistic.configs['disable-legacy'],

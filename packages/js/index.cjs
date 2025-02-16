@@ -8,7 +8,7 @@ delete jsdocNoPlugin.plugins;
 /** @type {import("eslint").Linter.FlatConfig[]} */
 module.exports = [
   js.configs.recommended,
-  ...google,
+  google,
   jsdocNoPlugin,
   stylistic.configs['disable-legacy'],
   {

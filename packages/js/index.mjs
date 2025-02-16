@@ -6,7 +6,7 @@ import stylistic from '@stylistic/eslint-plugin';
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   js.configs.recommended,
-  ...google,
+  google,
   jsdoc.configs['flat/recommended'],
   stylistic.configs['disable-legacy'],
   {
