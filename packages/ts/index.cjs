@@ -16,9 +16,8 @@ module.exports = [
     languageOptions: {
       parser: tseslint.parser
     },
+    // jsdoc and stylistic plugins already defined in Google
     plugins: {
-      'jsdoc': jsdoc,
-      '@stylistic': stylistic,
       '@typescript-eslint': tseslint.plugin
     },
     rules: {

@@ -10,10 +10,7 @@ export default [
   jsdoc.configs['flat/recommended'],
   stylistic.configs['disable-legacy'],
   {
-    // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
-    plugins: {
-      jsdoc: jsdoc
-    },
+    // jsdoc and stylistic plugins already defined in Google
     rules: {
       // highly subjective: dangling commas feel weird,
       '@stylistic/comma-dangle': ['error', 'never'],

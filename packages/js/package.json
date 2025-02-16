@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/hellomouse/eslint-config#readme",
   "dependencies": {
-    "@stylistic/eslint-plugin": ">= 1.1.0",
+    "@stylistic/eslint-plugin": ">= 1.1.0 < 4",
     "@eslint/js": "^9.2.0",
     "eslint-plugin-jsdoc": ">=48.2.3",
     "@hellomouse/eslint-config-google": "0.15.0-flat.2"
   },
   "peerDependencies": {
-    "eslint": ">=8.57 < 9"
+    "eslint": ">=8.57"
   },
   "exports": {
     ".": {
