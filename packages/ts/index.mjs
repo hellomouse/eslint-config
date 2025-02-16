@@ -30,7 +30,8 @@ export default [
         { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
         { selector: 'memberLike', format: ['camelCase'], leadingUnderscore: 'allow' },
         { selector: 'typeLike', format: ['PascalCase'] },
-        { selector: 'enumMember', format: ['PascalCase'] }
+        { selector: 'enumMember', format: ['PascalCase'] },
+        { selector: 'property', format: null }
       ],
 
       // any exists for a reason
