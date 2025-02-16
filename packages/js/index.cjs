@@ -3,13 +3,11 @@ const jsdoc = require('eslint-plugin-jsdoc');
 const js = require('@eslint/js');
 const stylistic = require('@stylistic/eslint-plugin');
 
-const jsdocNoPlugin = jsdoc.configs['flat/recommended'];
-delete jsdocNoPlugin.plugins;
 /** @type {import("eslint").Linter.FlatConfig[]} */
 module.exports = [
   js.configs.recommended,
   google,
-  jsdocNoPlugin,
+  { rules: jsdoc.configs['flat/recommended'].rules },
   stylistic.configs['disable-legacy'],
   {
     // jsdoc and stylistic plugins already defined in Google

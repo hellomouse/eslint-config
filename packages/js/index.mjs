@@ -7,7 +7,7 @@ import stylistic from '@stylistic/eslint-plugin';
 export default [
   js.configs.recommended,
   google,
-  jsdoc.configs['flat/recommended'],
+  { rules: jsdoc.configs['flat/recommended'].rules },
   stylistic.configs['disable-legacy'],
   {
     // jsdoc and stylistic plugins already defined in Google

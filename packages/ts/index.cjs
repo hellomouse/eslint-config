@@ -10,7 +10,7 @@ module.exports = [
   tseslint.configs.eslintRecommended,
   google,
   ...tseslint.configs.recommended,
-  jsdoc.configs['flat/recommended-typescript'],
+  { rules: jsdoc.configs['flat/recommended-typescript'].rules },
   stylistic.configs['disable-legacy'],
   {
     languageOptions: {
