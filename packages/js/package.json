@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config",
-  "version": "2.0.1-flat.2",
+  "version": "2.0.1-flat.3",
   "description": "Official ESLint config for Hellomouse, based off of Google's config",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "@stylistic/eslint-plugin": ">= 1.1.0",
     "@eslint/js": "^9.2.0",
     "eslint-plugin-jsdoc": ">=48.2.3",
-    "@hellomouse/eslint-config-google": "0.15.0-flat.1"
+    "@hellomouse/eslint-config-google": "0.15.0-flat.2"
   },
   "peerDependencies": {
     "eslint": ">=8.57 < 9"
