@@ -150,7 +150,7 @@ export default [
       '@typescript-eslint/no-invalid-this': 'error',
 
       'no-throw-literal': 'off',
-      '@typescript-eslint/no-throw-literal': 'error',
+      '@typescript-eslint/only-throw-error': 'error',
 
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],

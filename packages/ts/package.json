@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config-typescript",
-  "version": "2.0.1-flat.4",
+  "version": "2.0.1-flat.5",
   "description": "ESLint config for Hellomouse, based off of Google's config",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
