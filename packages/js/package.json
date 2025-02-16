@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config",
-  "version": "2.0.1-flat.4",
+  "version": "2.0.1-flat.5",
   "description": "Official ESLint config for Hellomouse, based off of Google's config",
   "repository": {
     "type": "git",
