@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config-google",
-  "version": "0.15.0-flat.2",
+  "version": "0.15.0-flat.3",
   "description": "ESLint shareable config for the Google style",
   "license": "Apache-2.0",
   "repository": {
